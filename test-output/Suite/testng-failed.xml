@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.w2a.listeners.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.w2a.testcases.Login">
+        <methods>
+          <include name="Teardown"/>
+          <include name="verifyLoginWithValidCredentials" invocation-numbers="0 1 2"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.w2a.testcases.Login -->
+      <class name="com.w2a.testcases.Search">
+        <methods>
+          <include name="TearDown"/>
+          <include name="verifySearchWithoutanyProduct"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.w2a.testcases.Search -->
+      <class name="com.w2a.testcases.Register">
+        <methods>
+          <include name="verifyRegisteringAnAccountWithALLFields"/>
+          <include name="TearDown"/>
+          <include name="verifyRegisteringAnAccountWithMandatoryFields"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.w2a.testcases.Register -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
